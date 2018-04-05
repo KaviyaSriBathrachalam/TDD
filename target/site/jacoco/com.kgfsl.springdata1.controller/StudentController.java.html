@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StudentController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">springdata1 Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.kgfsl.springdata1.controller</a> &gt; <span class="el_source">StudentController.java</span></div><h1>StudentController.java</h1><pre class="source lang-java linenums">package com.kgfsl.springdata1.controller;
+
+//
+import java.util.List;
+
+import com.kgfsl.springdata1.model.Student;
+import com.kgfsl.springdata1.repository.*;
+
+//import org.springframework.beans.factory.annotation.Autowire;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+//import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+
+
+
+
+/**
+ * StudentController
+
+ */
+@RestController
+ 
+@RequestMapping(&quot;/students&quot;)
+<span class="fc" id="L31">public class StudentController{</span>
+    @Autowired
+    StudentRepository studentRepository;
+
+	@RequestMapping(method = RequestMethod.GET)
+  public List&lt;Student&gt; findStudents() {
+    // System.out.println(&quot;??????????????????&quot;+studentRepository.findAll());
+<span class="fc" id="L38">    return studentRepository.findAll();</span>
+  }
+  
+  @RequestMapping(value = &quot;/{id}&quot;,method = RequestMethod.GET)
+  public Student findone(@PathVariable Long id) {
+<span class="fc" id="L43">    return  studentRepository.findOne(id);</span>
+  }
+  
+  @RequestMapping(method = RequestMethod.POST)
+  public Student addStudent(@RequestBody Student Student) {
+<span class="fc" id="L48">	  Student.setId(null);</span>
+<span class="fc" id="L49">    return studentRepository.saveAndFlush(Student);</span>
+  }
+  
+  @RequestMapping(value = &quot;/{id}&quot;, method = RequestMethod.PUT)
+  public Student updateStudent(@RequestBody Student updatedStudent, @PathVariable Long id) {
+<span class="fc" id="L54">    updatedStudent.setId(id);</span>
+<span class="fc" id="L55">    return studentRepository.saveAndFlush(updatedStudent);</span>
+  }
+  
+  @RequestMapping(value = &quot;/{id}&quot;, method = RequestMethod.DELETE)
+  public void deleteStudent(@PathVariable Long id) {
+<span class="fc" id="L60">    studentRepository.delete(id);</span>
+<span class="fc" id="L61">}</span>
+
+// public Student saveAndFlush(Student student1, Object object) {
+// 	return null;
+// }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

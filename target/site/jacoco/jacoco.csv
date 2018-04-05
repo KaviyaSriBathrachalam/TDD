@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+springdata1 Maven Webapp,com.kgfsl.springdata1.controller,StudentController,0,36,0,0,0,9,0,6,0,6
+springdata1 Maven Webapp,com.kgfsl.springdata1.model,Student,0,41,0,0,0,9,0,7,0,7
+springdata1 Maven Webapp,com.kgfsl.springdata1.config,AppInitializer,20,0,0,0,4,0,4,0,4,0
+springdata1 Maven Webapp,com.kgfsl.springdata1.config,WebConfig,48,0,0,0,10,0,3,0,3,0
+springdata1 Maven Webapp,com.kgfsl.springdata1.config,DataConfig,127,0,0,0,27,0,6,0,6,0
+springdata1 Maven Webapp,com.kgfsl.springdata1.config,SwaggerConfig,15,0,0,0,6,0,2,0,2,0

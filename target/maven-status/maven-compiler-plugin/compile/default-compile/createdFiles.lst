@@ -1,0 +1,7 @@
+com\kgfsl\springdata1\controller\StudentController.class
+com\kgfsl\springdata1\config\AppInitializer.class
+com\kgfsl\springdata1\config\WebConfig.class
+com\kgfsl\springdata1\config\SwaggerConfig.class
+com\kgfsl\springdata1\model\Student.class
+com\kgfsl\springdata1\repository\StudentRepository.class
+com\kgfsl\springdata1\config\DataConfig.class

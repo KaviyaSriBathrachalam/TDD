@@ -1,0 +1,22 @@
+{
+    "run": [
+        {
+            "name": "springdata1",
+            "projectName": "springdata1",
+            "workingDirectory": "d:\\kaviya\\springdata2",
+            "args": [],
+            "vmargs": [],
+            "preLaunchTask": ""
+        }
+    ],
+    "debug": [
+        {
+            "name": "springdata1",
+            "projectName": "springdata1",
+            "workingDirectory": "d:\\kaviya\\springdata2",
+            "args": [],
+            "vmargs": [],
+            "preLaunchTask": ""
+        }
+    ]
+}
